@@ -5,9 +5,9 @@
 
 typedef struct
 {
-	int houseNumber;
-	char* street;
-	char* city;
+	char* barcode;
+	float price;
+	int amountInCart;
 
 } ShoppingItem;
 
