@@ -1,11 +1,13 @@
 #define _CRT_SECURE_NO_WARNINGS
 
-#include "Product.h"
-
 #include <stdio.h>
 #include <ctype.h>
 #include <stdlib.h>
 #include <string.h>
+
+#include "Product.h"
+
+
 
 const char* typeTitle[NofTypes] = { "Shelf","Frozen","Fridge", "FruitVegtable" };
 
