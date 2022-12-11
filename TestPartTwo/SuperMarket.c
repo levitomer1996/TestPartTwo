@@ -7,3 +7,8 @@ void printSuperMarket(const SuperMarket* superMarket)
 	printf("Number of customers: %d\n", superMarket->numOfCustomers);
 	printf("Number of products: %d\n", superMarket->numOfProducts);
 }
+
+int addProductToSuperMarket(SuperMarket* pSM, Product* pProd)
+{
+	return 0;
+}

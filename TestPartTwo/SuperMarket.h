@@ -12,7 +12,7 @@ typedef struct {
 	Product** products;
 	int numOfProducts;
 } SuperMarket;
-
-void printSuperMarket(const SuperMarket* superMarket);
-
+//SM - Super Market
+void	printSuperMarket(const SuperMarket* pSM);
+int		addProductToSuperMarket(SuperMarket* pSM, Product* pProd);
 #endif
