@@ -81,6 +81,13 @@ char* initBarCode(const char* msg)
 	
 }
 
+void freeProduct(Product* pProd)
+{
+	free(pProd->barCode);
+	free(pProd->name);
+	
+}
+
 
 ProductType getProdcutTypeFromUser() 
 {

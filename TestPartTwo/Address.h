@@ -13,7 +13,7 @@ typedef struct
 
 void	initAddress(Address* pAd);
 void	printAddress(const Address* pAd);
-
+void	freeAdress(Address* pAd);
 
 
 #endif

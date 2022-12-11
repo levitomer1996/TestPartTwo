@@ -21,6 +21,12 @@ void printAddress(const Address* pAd)
 	printf("street %s city %s number % d\n", pAd->street, pAd->city, pAd->houseNumber);
 }
 
+void freeAdress(Address* pAd)
+{
+	free(pAd->city);
+	free(pAd->street);
+}
+
 
 //char* getStrExactLength()
 //{

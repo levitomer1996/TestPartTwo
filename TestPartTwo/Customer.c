@@ -15,6 +15,11 @@ void printCustomer(Customer* pCust)
 	printShoppingCart(pCust->shoppingCart);
 }
 
+void freeCustomer(Customer* pCust)
+{
+	free(pCust->name);
+}
+
 //Check if customer has items in his cart, if not cart is null.
 int isCartExistEmpty(Customer* pCust) {
 	if (pCust->shoppingCart == NULL) {

@@ -20,6 +20,6 @@ typedef struct
 void	initProduct(Product* pProd);
 void	printProduct(const Product* pProd);
 char*	initBarCode(const char* msg);
-
+void	freeProduct(Product* pProd);
 
 #endif
