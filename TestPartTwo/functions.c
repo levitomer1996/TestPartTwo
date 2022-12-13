@@ -22,6 +22,10 @@ char* createDynStr(const char* msg)
 char* formatStr(const char* msg)
 {
 	char* str = createDynStr(msg);
+	char delim = "#";
+	char* token = strtok(str, delim);
+	printf("%s", str);
+
 	
 
 }

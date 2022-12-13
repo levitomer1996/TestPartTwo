@@ -10,5 +10,6 @@ void printSuperMarket(const SuperMarket* superMarket)
 
 int addProductToSuperMarket(SuperMarket* pSM, Product* pProd)
 {
+
 	return 0;
 }
