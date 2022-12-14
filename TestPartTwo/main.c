@@ -11,6 +11,10 @@
 
 int main()
 {
+//Init Super marketFirst
+	SuperMarket* superMarket;
+	initSuperMarket(&superMarket);
+
 char choice = '0';
 	int exit = 0;
 

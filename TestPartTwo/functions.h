@@ -9,8 +9,9 @@
 char* createDynStr(const char* msg);
 char** removeHashTagsFromString(const char* msg, int* pSize); // Made to be used when init supermarket
 void removeSpacedExtraSpacesFromStr(char** str, int* pSize);
+void removeExtraSpaces(char* str);
 char* getDynString(char* str);
-void removeCharAtindex(char* str, int index);// Used as an helper for remove spaces
+
 char* formatStringAdress(char** str, int* pSize);
 char* initSuperMarketAdress();
 

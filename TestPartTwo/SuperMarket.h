@@ -6,7 +6,7 @@
 
 typedef struct {
 	char* name;
-	char* adress;
+	char** adress;
 	Customer** customers;
 	int numOfCustomers;
 	Product** products;
@@ -14,5 +14,6 @@ typedef struct {
 } SuperMarket;
 //SM - Super Market
 void	printSuperMarket(const SuperMarket* pSM);
+void	initSuperMarket(SuperMarket* pSM);
 int		addProductToSuperMarket(SuperMarket* pSM, Product* pProd);
 #endif

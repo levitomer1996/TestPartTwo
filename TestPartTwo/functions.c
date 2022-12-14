@@ -21,10 +21,14 @@ char* getDynString(char* str)
 	return newStr;
 }
 
-void removeCharAtindex(char* s)
-{
-	
-		int i, j;
+void removeExtraSpaces(char* str) {
+	int i, x;
+	for (i = x = 0; str[i]; ++i)
+		if (!isspace(str[i]) || (i > 0 && !isspace(str[i - 1])))
+			str[x++] = str[i];
+	str[x] = '\0';
+}
+
 
 
 char* formatStringAdress(char** str, int* size)
@@ -36,7 +40,7 @@ char* formatStringAdress(char** str, int* size)
 	}
 }
 
-char* initSuperMarketAdress()
+char** initSuperMarketAdress()
 {
 	int pSize = 0;
 
@@ -47,7 +51,7 @@ char* initSuperMarketAdress()
 	
 	removeSpacedExtraSpacesFromStr(adress , &pSize);
 
-	return 0;
+	return adress;
 }
 
 char* createDynStr(const char* msg)
@@ -94,9 +98,10 @@ char** removeHashTagsFromString(char* str,int* pSize)
 
 void removeSpacedExtraSpacesFromStr(char** str, int* pSize)
 {
-	printf("%d", *pSize);
-
+	for (int i = 0; i < *pSize; i++) {
+		removeExtraSpaces(*(str + i));
 	}
+	
 	
 }
 
