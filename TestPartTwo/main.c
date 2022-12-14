@@ -7,10 +7,6 @@
 
 int main()
 {
-	//Address arr[MAX_ADDRESS];
-	//Product* p;
-	//initProduct(&p);
-	//printProduct(&p);
 	
 	return 0;
 }
