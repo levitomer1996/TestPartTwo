@@ -26,7 +26,6 @@ char* createDynStr(const char* msg)
 
 char* formatStr(const char* msg)
 {
-	char* str = createDynStr(msg);
 	const char delim[2] = "#";
 	char* token = strtok(str, delim);
 	char* newString =NULL;
