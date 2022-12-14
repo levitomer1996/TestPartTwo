@@ -44,7 +44,8 @@ char choice = '0';
 			choice = 'e';
 			break;
 		case '9':
-			formatStr("Please give me a string:");
+			
+			initSuperMarketAdress();
 			choice = 'e';
 			break;
 		default:

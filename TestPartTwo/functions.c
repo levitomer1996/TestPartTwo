@@ -10,6 +10,62 @@
 
 
 
+char* getDynString(char* str)
+{
+	char* newStr;
+	newStr = (char*)malloc((strlen(str) + 1) * sizeof(char));
+	if (!newStr)
+		return NULL;
+
+	strcpy(newStr, str);
+	return newStr;
+}
+
+void removeCharAtindex(char* s)
+{
+	
+		int i, j;
+
+		// Loop through the string, starting at the second character
+		for (i = 1, j = 0; i < strlen(s); i++) {
+			// If the current character is a space and the previous character is also a space, skip it
+			if (s[i] == ' ' && s[i - 1] == ' ') {
+				continue;
+			}
+
+			// Otherwise, copy the current character to the next position in the string
+			s[j++] = s[i];
+		}
+
+		// Terminate the string
+		s[j] = '\0';
+	
+	
+}
+
+char* formatStringAdress(char** str, int* size)
+{
+	for (int i = 0; i < &size; i++)
+	{
+		str[i] = (char*)realloc(str,sizeof(str[i]) +sizeof(char));
+	
+	}
+}
+
+char* initSuperMarketAdress()
+{
+	int pSize = 0;
+
+	int finalPos = 0;
+	char*  dynStr = createDynStr("Please insert adress: ");
+	char** adress = removeHashTagsFromString(dynStr, &pSize);
+
+	
+	removeSpacedExtraSpacesFromStr(adress , &pSize);
+	char* finalAdress = malloc((pSize * sizeof(char*)));
+
+	return 0;
+}
 
 char* createDynStr(const char* msg)
 {
@@ -19,24 +75,48 @@ char* createDynStr(const char* msg)
 	getchar();//getChar cleanes the input stream from '\n'
 	fgets(buffer, sizeof(buffer), stdin);
 	char* dynamicString = malloc(strlen(buffer) + 1);
+	if (!dynamicString) return 0;
 	strcpy(dynamicString, buffer);
 	return dynamicString;
 }
 
 
-char* formatStr(const char* msg)
+char** removeHashTagsFromString(char* str,int* pSize)
 {
+
+
 	const char delim[2] = "#";
 	char* token = strtok(str, delim);
-	char* newString =NULL;
-	int pos = 0;
-	
+	char** adressesArray = NULL;// An array of adresses of tokens aka words...
+	int pos = 0, size = 0;
+
 	while (token != NULL) {
-		printf(" %s", token);
-		token = strtok(NULL, delim);
+		
+		adressesArray = (char**)realloc(adressesArray, (pos + 1) * sizeof(char*));
+		if (!adressesArray) 
+		{
+			return 0;
+		}
+		token[0] = toupper(token[0]);
+		adressesArray[pos] = getDynString(token);
+		size += strlen(token);
+     	token = strtok(NULL, delim);
 		pos++;
 	}
-	return newString;
+	free(token);
+	
+	*pSize = size;
+	return  adressesArray;
+}
+
+void removeSpacedExtraSpacesFromStr(char** str, int* pSize)
+{
+	printf("%d", *pSize);
+
+	for (int i = 0; i < *pSize; i++) {
+		removeCharAtindex(str[i]);
+	}
+	
 }
 
 //Swtich case in main.
