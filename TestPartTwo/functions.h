@@ -5,6 +5,5 @@
 #define MAX_LENGTH 255
 char* createDynStr(const char* msg);
 
-char* formatStr();
 
 #endif

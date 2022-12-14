@@ -12,9 +12,6 @@ char* createDynStr(const char* msg)
 	fgets(str, sizeof(temp), stdin);
 
 
-	return str;
-}
-
 char* formatStr(const char* msg)
 {
 	char* str = createDynStr(msg);
