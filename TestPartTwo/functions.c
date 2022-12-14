@@ -26,22 +26,6 @@ void removeCharAtindex(char* s)
 	
 		int i, j;
 
-		// Loop through the string, starting at the second character
-		for (i = 1, j = 0; i < strlen(s); i++) {
-			// If the current character is a space and the previous character is also a space, skip it
-			if (s[i] == ' ' && s[i - 1] == ' ') {
-				continue;
-			}
-
-			// Otherwise, copy the current character to the next position in the string
-			s[j++] = s[i];
-		}
-
-		// Terminate the string
-		s[j] = '\0';
-	
-	
-}
 
 char* formatStringAdress(char** str, int* size)
 {
@@ -62,7 +46,6 @@ char* initSuperMarketAdress()
 
 	
 	removeSpacedExtraSpacesFromStr(adress , &pSize);
-	char* finalAdress = malloc((pSize * sizeof(char*)));
 
 	return 0;
 }
@@ -113,8 +96,6 @@ void removeSpacedExtraSpacesFromStr(char** str, int* pSize)
 {
 	printf("%d", *pSize);
 
-	for (int i = 0; i < *pSize; i++) {
-		removeCharAtindex(str[i]);
 	}
 	
 }
