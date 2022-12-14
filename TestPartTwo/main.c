@@ -12,10 +12,5 @@ int main()
 	//initProduct(&p);
 	//printProduct(&p);
 	
-
-	//initAddress(arr, MAX_ADDRESS);
-	//printf("The address are:\n");
-	//printAddress(arr, initAddress);
-	//getStrExactLength();
 	return 0;
 }

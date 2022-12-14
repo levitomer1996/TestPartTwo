@@ -11,10 +11,6 @@ char* createDynStr(const char* msg)
 	printf("Enter %s: ", msg);
 	fgets(str, sizeof(temp), stdin);
 
-	str = (char*)malloc((strlen(temp) + 1) * sizeof(char));
-	if (!str)
-		return NULL;
-	strcpy(str, temp);
 
 	return str;
 }
@@ -25,7 +21,4 @@ char* formatStr(const char* msg)
 	char delim = "#";
 	char* token = strtok(str, delim);
 	printf("%s", str);
-
-	
-
 }
